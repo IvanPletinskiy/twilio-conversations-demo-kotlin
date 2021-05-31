@@ -37,6 +37,7 @@ class LoginViewModel(
                 loginManager.signIn(identity, password)
                 onSignInSuccess.call()
             } catch (e: ConversationsException) {
+                e.printStackTrace()
                 isLoading.value = false
                 onSignInError.value = e.error
             }

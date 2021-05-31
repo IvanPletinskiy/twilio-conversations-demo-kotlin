@@ -39,8 +39,7 @@ open class Injector {
     open fun createLoginManager(applicationContext: Context): LoginManager = LoginManagerImpl(
         ConversationsClientWrapper.INSTANCE,
         ConversationsRepositoryImpl.INSTANCE,
-        CredentialStorage(applicationContext),
-        FirebaseTokenManager(),
+        CredentialStorage(applicationContext)
     )
 
     open fun createLoginViewModel(application: Application): LoginViewModel {
